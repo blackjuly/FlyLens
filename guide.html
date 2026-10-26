@@ -1,20 +1,129 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f1f1">
-  <meta name="description" content="飞镜使用指南：连接 OBS、开启共享麦克风无障碍服务，以及设置语音跟随提词器。">
-  <title>使用指南 · 飞镜</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script src="site-config.js"></script><script src="assets/app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1f1">
+  <meta name="description" content="飞镜完整使用指南：连接 OBS、填写手机 IP、配置 USB、开启应用内与悬浮提词器，以及语音跟随排查。">
+  <title>使用指南 · 飞镜</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="site-config.js"></script>
+  <script src="assets/app.js" defer></script>
 </head>
 <body class="guide-page">
   <a class="skip-link" href="#guide-content">跳到正文</a>
-  <header class="site-header"><nav class="nav-wrap" aria-label="主导航"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><div class="nav-links"><a href="index.html#modes">功能</a><a class="is-current" href="guide.html">使用指南</a><a class="nav-download" id="navDownload" href="#download">下载 APK</a></div></nav></header>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="主导航">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a>
+      <div class="nav-links"><a href="index.html#modes">功能</a><a class="is-current" href="guide.html">使用指南</a><a class="nav-download" id="navDownload" href="#download">下载 APK</a></div>
+    </nav>
+  </header>
+
   <main id="guide-content">
-    <section class="guide-hero section-wide"><p class="context-line">飞镜使用指南</p><h1>从安装到开拍，<br>按你的现场来。</h1><p>选择你要使用的模式。连接 OBS 适合直播和电脑录制；悬浮提词器适合直接使用手机原厂相机拍口播。</p><nav class="guide-jump" aria-label="本页目录"><a href="#obs">连接 OBS</a><a href="#accessibility">共享麦克风</a><a href="#teleprompter">提词器设置</a><a href="#troubleshooting">排查问题</a></nav></section>
-    <section class="guide-chapter section-wide" id="obs"><div class="chapter-heading"><span>OBS 模式</span><h2>让手机成为 OBS 摄像头。</h2><p>提词只在手机上显示，不会进入 OBS 画面。</p></div><ol class="instruction-list"><li><strong>电脑安装软件</strong><p>安装 OBS Studio，再安装 DroidCam OBS 插件。安装完成后重启 OBS。</p><div class="external-actions"><a href="https://obsproject.com/download" target="_blank" rel="noopener noreferrer">OBS Studio 官方下载 ↗</a><a href="https://droidcam.app/obs/" target="_blank" rel="noopener noreferrer">插件说明 ↗</a><a href="https://github.com/dev47apps/droidcam-obs-plugin/releases/latest" target="_blank" rel="noopener noreferrer">插件最新版 ↗</a></div></li><li><strong>连接手机与电脑</strong><p>先让手机与电脑处于同一局域网；需要更稳定时可改用 USB。打开飞镜后保持推流页面在前台。</p></li><li><strong>在 OBS 添加来源</strong><p>来源区域点击“+”，选择 DroidCam OBS，找到飞镜设备或填写手机显示的 IP 地址。需要手机声音时开启设备音频。</p></li><li><strong>按现场调整</strong><p>可选择前后镜头、分辨率、帧率、码率、H.264/H.265 和音频。第一次建议保留默认值，画面稳定后再提高画质。</p></li></ol></section>
-    <section class="accessibility-guide" id="accessibility"><div class="section-wide accessibility-guide-inner"><div><span>原厂相机模式 · 必做</span><h2>开启“飞镜共享麦克风”。</h2><p>Android 通常只允许一个应用占用麦克风。原厂相机开始录像后，飞镜需要通过这项无障碍服务共享声音，才能继续识别和滚动。</p></div><ol><li>打开系统“设置”，进入“无障碍”。</li><li>在“已下载的服务”“更多服务”或“听觉辅助”里找到“飞镜共享麦克风”。不同品牌名称可能略有不同。</li><li>打开服务并确认授权，再回到飞镜切换“悬浮提词器”。</li><li>打开原厂相机录一小段，朗读一句，确认已读文字会变灰并自动向上移动。</li></ol><div class="privacy-note"><strong>这项服务只做什么？</strong><p>只帮助飞镜在录像时继续取得麦克风声音。它不会读取屏幕内容、记录按键、代替你点击，也不会上传音频。</p></div></div></section>
-    <section class="guide-chapter section-wide" id="teleprompter"><div class="chapter-heading"><span>提词器</span><h2>把文字放在最接近镜头的位置。</h2><p>先让眼神自然，再调速度和显示。</p></div><ol class="instruction-list"><li><strong>粘贴或修改文稿</strong><p>在设置页进入“文字”，粘贴完整口播稿。返回后会立即刷新预览和提词内容。</p></li><li><strong>调整阅读尺寸</strong><p>字号以不眯眼为准；悬浮模式可单独拖动高度，让下一句始终露出。需要反光板时再打开镜像。</p></li><li><strong>选择滚动方式</strong><p>语音跟随适合自然口播：读到哪里，已读区域就会变灰并自动滚动。环境嘈杂或设备限制采音时，可暂时使用定速滚动。</p></li><li><strong>选择显示模式</strong><p>OBS 录制用应用内提词器；原厂相机录像用悬浮提词器。两种模式共用同一份文稿和显示设置。</p></li></ol></section>
-    <section class="troubleshooting section-wide" id="troubleshooting"><h2>遇到问题，先看这里。</h2><details open><summary>原厂相机录像后不再跟读</summary><p>检查“飞镜共享麦克风”无障碍服务、麦克风权限和悬浮窗权限是否都已开启。部分 vivo、OPPO、小米设备还需允许后台运行并关闭飞镜的省电限制。</p></details><details><summary>OBS 找不到手机</summary><p>确认手机和电脑在同一局域网、插件已安装并重启 OBS；关闭隔离客户端的访客 Wi-Fi。使用 USB 时，确认系统已识别设备。</p></details><details><summary>画面卡顿或延迟高</summary><p>先降低分辨率、帧率或码率，优先使用 5 GHz Wi-Fi；直播环境建议用 USB 或稳定的局域网。编码可先选择兼容性更高的 H.264。</p></details><details><summary>语音跟随跳过空行后看不到下一句</summary><p>飞镜会把连续空行作为段落间隔处理，并在当前段落读完时提前露出下一段。仍觉得内容太少时，可直接拖高提词区域。</p></details></section>
+    <section class="guide-hero section-wide">
+      <p class="context-line">飞镜使用指南</p>
+      <h1>第一次使用，<br>从这里接通。</h1>
+      <p>先选拍摄方式，再按步骤设置。OBS 模式把手机变成电脑摄像头；悬浮模式让原厂相机上方继续显示并跟读提词。</p>
+      <nav class="guide-jump" aria-label="本页目录">
+        <a href="#choose-mode">选择模式</a><a href="#obs">连接 OBS</a><a href="#usb">USB 连接</a><a href="#teleprompter">应用内提词</a><a href="#overlay">悬浮提词</a><a href="#troubleshooting">排查问题</a>
+      </nav>
+    </section>
+
+    <section class="mode-decision section-wide" id="choose-mode">
+      <div class="chapter-heading"><span>先选一种用法</span><h2>你在哪里录，决定从哪里开始。</h2></div>
+      <div class="mode-paths">
+        <article><span>01 · 电脑直播 / 录制</span><h3>手机 + OBS</h3><p>手机负责拍摄和显示应用内提词，电脑上的 OBS 接收干净画面。提词文字不会进入直播画面。</p><a href="#obs">从 Wi-Fi 连接开始 →</a></article>
+        <article><span>02 · 纯手机口播</span><h3>原厂相机 + 悬浮提词器</h3><p>飞镜浮在原厂相机之上；开启共享麦克风无障碍服务后，录像时仍可语音跟随。</p><a href="#overlay">从悬浮模式开始 →</a></article>
+      </div>
+    </section>
+
+    <section class="guide-chapter section-wide" id="obs">
+      <div class="chapter-heading">
+        <span>OBS · Wi-Fi 连接</span>
+        <h2>把手机接入 OBS。</h2>
+        <p>下面按 DroidCam OBS 官方流程整理，并把飞镜里的入口和状态对应起来。</p>
+        <div class="external-actions"><a href="https://obsproject.com/download" target="_blank" rel="noopener noreferrer">下载 OBS Studio ↗</a><a href="https://droidcam.app/obs/" target="_blank" rel="noopener noreferrer">下载 DroidCam OBS 插件 ↗</a><a href="https://www.droidcam.app/obs/usage/" target="_blank" rel="noopener noreferrer">查看插件官方说明 ↗</a></div>
+      </div>
+      <ol class="instruction-list instruction-list-detailed">
+        <li><strong>安装 OBS 与插件</strong><p>先安装 OBS Studio，再从 DroidCam 官网选择与你当前 OBS 版本兼容的插件。插件安装完成后，完全退出并重新打开 OBS。</p></li>
+        <li><strong>让电脑和手机进入同一局域网</strong><p>两台设备连接同一个路由器，优先使用稳定的 5 GHz Wi-Fi。访客网络、VPN 和公司隔离网络可能阻止互相发现。</p></li>
+        <li><strong>在飞镜查看正确的 IP</strong><p>打开飞镜，点击顶部“状态”。记下 <em>Wi-Fi</em> 后面的地址，例如 <code>192.168.1.6</code>。不要使用“数据网络”“VPN”“其他网络”的地址，也不要填写 <code>127.0.0.1</code>。</p><div class="phone-status-example" aria-label="飞镜状态示例"><span>状态</span><strong>Wi-Fi&nbsp;&nbsp;192.168.1.6</strong><small>端口 4747 · 等待电脑连接</small></div></li>
+        <li><strong>在 OBS 添加 DroidCam 来源</strong><p>在 OBS 的“来源”区域点击“+”，选择 <em>DroidCam OBS</em>。如果列表中没有这一项，说明插件尚未正确安装或 OBS 还没有重启。</p></li>
+        <li><strong>填写手机 IP</strong><p>打开刚添加的来源属性，将 <em>Device</em> 选为 <em>Use WiFi</em>，在 <em>WiFi IP</em> 填入手机显示的 Wi-Fi 地址。只填数字与小数点，不要加 <code>http://</code>，也不要把 <code>:4747</code> 写进 IP 框。</p><div class="obs-settings-example" aria-label="OBS 设置示例"><div><span>Device</span><strong>Use WiFi</strong></div><div><span>WiFi IP</span><strong>192.168.1.6</strong></div><div><span>Port</span><strong>4747</strong></div><div><span>Video Format</span><strong>AVC / H.264</strong></div></div><p class="plain-note">如果没有看到 WiFi IP 输入框，请在来源属性窗口内向下滚动。</p></li>
+        <li><strong>先用稳妥参数连接</strong><p>第一次建议选择 <em>1280 × 720、30 fps、AVC / H.264</em>，再点击 <em>Activate</em>。连通后再按网络和电脑性能提高画质。</p></li>
+        <li><strong>确认真的连上了</strong><p>以下三项同时出现就代表连接成功：OBS 预览出现手机画面；飞镜顶部状态卡自动收起；再次点“状态”能看到“推流中，客户端 1”。</p><div class="success-check"><span>OBS 出现画面</span><span>手机开始摄像</span><span>状态显示客户端 1</span></div></li>
+      </ol>
+    </section>
+
+    <section class="choice-note">
+      <div class="section-wide">
+        <div><span>声音设置很重要</span><h2>语音跟随，还是把手机声音送进 OBS？</h2></div>
+        <div><p><strong>要使用 AI 语音跟随：</strong>不要在 DroidCam OBS 来源里开启手机音频。让飞镜独占手机麦克风，OBS 改用电脑麦克风或其他麦克风来源。</p><p><strong>要把手机声音送进 OBS：</strong>可以打开插件的 <em>Enable Audio</em>，但飞镜会暂停语音跟随，提词器改用定速滚动。</p></div>
+      </div>
+    </section>
+
+    <section class="usb-guide section-wide" id="usb">
+      <div class="chapter-heading"><span>OBS · USB 连接</span><h2>直播现场，USB 更稳定。</h2><p>Wi-Fi 延迟高或网络受限时使用。不同 Android 品牌的开发者选项入口略有不同。</p></div>
+      <ol>
+        <li><p>手机“设置”中连续点击版本号，开启开发者选项，再打开 <strong>USB 调试</strong>。</p></li>
+        <li><p>使用支持数据传输的 USB 线连接电脑；手机弹出授权时选择允许。</p></li>
+        <li><p>在 DroidCam OBS 来源属性中点击 <strong>Refresh Device List</strong>，选择出现的手机。</p></li>
+        <li><p>点击 <strong>Activate</strong>。仍未发现设备时，换数据线或 USB 接口，并确认 Windows 已识别手机。</p></li>
+      </ol>
+    </section>
+
+    <section class="guide-chapter section-wide" id="teleprompter">
+      <div class="chapter-heading"><span>应用内提词器 · 搭配 OBS</span><h2>先写稿，再把文字靠近镜头。</h2><p>这套模式在飞镜 App 内显示提词，OBS 只收到摄像头画面，不会录到文字。</p></div>
+      <ol class="instruction-list instruction-list-detailed">
+        <li><strong>录入文稿</strong><p>在飞镜主界面点击右上角“⋮” → “设置” → “提词器” → “文字”。粘贴或修改口播稿并返回，预览与提词内容会立即更新。</p></li>
+        <li><strong>调整阅读设置</strong><p>在同一页设置“字号”“速度”“镜像”和“语音跟随”。字号以不眯眼为准；速度只影响定速模式；使用实体反光提词器时才需要镜像。</p></li>
+        <li><strong>显示提词器</strong><p>回到主界面，点右侧蓝色“提”按钮，再选“显示提词器”；也可以从右上角“⋮” → “提词器”进入。</p></li>
+        <li><strong>边看边录</strong><p>读过的文字会变灰，蓝色位置标记会跟着当前内容移动。连续空行会压缩处理，并提前露出下一段，避免小窗口看不到下一句。</p></li>
+      </ol>
+      <div class="gesture-list" aria-label="应用内提词器快捷操作"><span><strong>点文字</strong> 暂停 / 继续</span><span><strong>上下滑</strong> 手动找位置</span><span><strong>拖底边</strong> 只调整高度</span><span><strong>双指缩放</strong> 调整整体大小与字号</span></div>
+    </section>
+
+    <section class="accessibility-guide" id="accessibility">
+      <div class="section-wide accessibility-guide-inner">
+        <div><span>原厂相机模式 · 语音跟随必做</span><h2>开启“飞镜共享麦克风”。</h2><p>Android 通常只允许一个应用占用麦克风。原厂相机开始录像后，飞镜需要通过这项无障碍服务共享声音，才能继续识别和滚动。</p></div>
+        <ol><li>打开系统“设置”，进入“无障碍”。</li><li>在“已下载的服务”“更多服务”或“听觉辅助”里找到“飞镜共享麦克风”。不同品牌名称可能略有不同。</li><li>打开服务并确认授权，再回到飞镜切换“悬浮提词器”。</li><li>打开原厂相机录一小段，朗读一句，确认已读文字会变灰并自动向上移动。</li></ol>
+        <div class="privacy-note"><strong>这项服务只做什么？</strong><p>只帮助飞镜在录像时继续取得麦克风声音。它不会读取屏幕内容、记录按键、代替你点击，也不会上传音频。</p></div>
+      </div>
+    </section>
+
+    <section class="guide-chapter section-wide" id="overlay">
+      <div class="chapter-heading"><span>悬浮提词器 · 搭配原厂相机</span><h2>把飞镜放到相机上方。</h2><p>先在飞镜完成文字与权限设置，再手动打开手机自带相机。</p></div>
+      <ol class="instruction-list instruction-list-detailed">
+        <li><strong>先准备文稿</strong><p>点击“⋮” → “设置” → “提词器” → “文字”，粘贴文稿；按需要设置字号、语速与语音跟随。</p></li>
+        <li><strong>切换到悬浮提词器</strong><p>在“设置 → 提词器”底部点击“切换到悬浮提词器”；也可以点蓝色“提”按钮，选择同名入口。</p></li>
+        <li><strong>按提示完成权限</strong><p>允许麦克风权限；需要录像时语音跟随，请开启“飞镜共享麦克风”无障碍服务。若系统仍询问“显示在其他应用上层”，也请允许。</p></li>
+        <li><strong>打开原厂相机并开录</strong><p>飞镜进入悬浮状态后，手动打开手机原厂相机。悬浮窗显示“等待语音”或“语音跟随中”后开始朗读，读过区域会逐渐变灰并自动滚动。</p></li>
+        <li><strong>结束或返回 App</strong><p>点击悬浮窗左上角“回到 App”，会保留当前阅读位置；点击右上角“×”关闭悬浮提词器。</p></li>
+      </ol>
+      <div class="overlay-controls"><div><strong>顶部把手</strong><span>移动悬浮窗</span></div><div><strong>底部把手</strong><span>只改变高度</span></div><div><strong>点文字</strong><span>暂停 / 继续</span></div><div><strong>双指缩放</strong><span>改变宽高与字号</span></div></div>
+    </section>
+
+    <section class="troubleshooting section-wide" id="troubleshooting">
+      <h2>遇到问题，先看这里。</h2>
+      <details open><summary>OBS 填哪个 IP？端口要不要一起填？</summary><p>填写飞镜“状态”里 <strong>Wi-Fi</strong> 后面的地址。WiFi IP 框只填类似 <code>192.168.1.6</code> 的内容；端口单独填 <code>4747</code>。不要填数据网络、VPN 地址，也不要输入 <code>http://</code>。</p></details>
+      <details><summary>OBS 里没有 DroidCam OBS 来源</summary><p>重新确认安装的是与当前 OBS 版本兼容的 DroidCam OBS 插件，并在安装后完全重启 OBS。添加入口位于 OBS“来源”区域的“+”菜单。</p></details>
+      <details><summary>填好 IP 仍然连接不上</summary><p>确认手机和电脑连接同一局域网，临时关闭 VPN，避免访客 Wi-Fi；点击 Activate 前先用 720p / 30 fps / H.264。若网络有设备隔离，改用 USB。</p></details>
+      <details><summary>原厂相机录像后不再跟读</summary><p>检查“飞镜共享麦克风”无障碍服务、麦克风权限和悬浮窗权限是否都已开启。部分 vivo、OPPO、小米设备还需允许后台运行并关闭飞镜的省电限制。</p></details>
+      <details><summary>OBS 连接后语音跟随停止</summary><p>检查 DroidCam OBS 来源是否开启了手机音频。手机音频推流会占用麦克风，此时飞镜自动暂停语音跟随。关闭 Enable Audio，并在 OBS 中改用电脑麦克风即可恢复。</p></details>
+      <details><summary>画面卡顿或延迟高</summary><p>先降低到 1280 × 720、30 fps，使用 H.264，并优先连接 5 GHz Wi-Fi；直播环境建议使用 USB 或稳定局域网。</p></details>
+      <details><summary>文字太少，看不到下一句</summary><p>拖动提词器底部把手可只增加高度；飞镜也会压缩连续空行，并在当前段落读完时提前露出下一段。双指缩放会同时改变窗口与字号。</p></details>
+    </section>
+
+    <section class="official-reference section-wide">
+      <p>本指南中的 OBS 安装与连接步骤参照官方资料整理。</p>
+      <div><a href="https://www.droidcam.app/obs/usage/" target="_blank" rel="noopener noreferrer">DroidCam OBS 使用说明 ↗</a><a href="https://droidcam.app/obs/" target="_blank" rel="noopener noreferrer">DroidCam OBS 插件下载 ↗</a><a href="https://obsproject.com/kb/sources-guide" target="_blank" rel="noopener noreferrer">OBS 来源使用指南 ↗</a></div>
+    </section>
+
     <section class="guide-download" id="download"><div class="section-wide"><div><h2>准备好了，就装到手机。</h2><p>Android 6.0+；悬浮语音跟随建议 Android 10+。</p></div><a class="dark-button" id="downloadButton" href="#download">下载 Android APK</a></div></section>
   </main>
-  <footer class="section-wide"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><p>把镜头留给表达。</p><nav><a href="index.html">返回首页</a><a id="footerDownload" href="#download">下载 APK</a></nav></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body></html>
+
+  <footer class="section-wide"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><p>把镜头留给表达。</p><nav><a href="index.html">返回首页</a><a id="footerDownload" href="#download">下载 APK</a></nav></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
