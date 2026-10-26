@@ -31,7 +31,7 @@
       setText("stageStatus", cameraMode ? "原厂相机录像中" : "OBS 输出中");
       setText("stageTitle", cameraMode ? "台词悬浮在镜头旁" : "观众只看到干净画面");
       setText("cameraMeta", cameraMode ? "00:18 · 4K" : "1080p · 30fps");
-      var output = byId("outputLabel"); if (output) output.innerHTML = cameraMode ? "<span></span>共享麦克风已开启" : "<span></span>送入 OBS：画面 + 音频";
+      var output = byId("outputLabel"); if (output) output.innerHTML = cameraMode ? "<span></span>共享麦克风已开启" : "<span></span>送入 OBS：干净摄像画面";
     });
   });
   function setText(id, value) { var el = byId(id); if (el) el.textContent = value; }
