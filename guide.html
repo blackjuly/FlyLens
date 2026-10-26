@@ -48,7 +48,7 @@
       <ol class="instruction-list instruction-list-detailed">
         <li><strong>安装 OBS 与插件</strong><p>先安装 OBS Studio，再从 DroidCam 官网选择与你当前 OBS 版本兼容的插件。插件安装完成后，完全退出并重新打开 OBS。</p></li>
         <li><strong>让电脑和手机进入同一局域网</strong><p>两台设备连接同一个路由器，优先使用稳定的 5 GHz Wi-Fi。访客网络、VPN 和公司隔离网络可能阻止互相发现。</p></li>
-        <li><strong>在飞镜查看正确的 IP</strong><p>打开飞镜，点击顶部“状态”。记下 <em>Wi-Fi</em> 后面的地址，例如 <code>192.168.1.6</code>。不要使用“数据网络”“VPN”“其他网络”的地址，也不要填写 <code>127.0.0.1</code>。</p><div class="phone-status-example" aria-label="飞镜状态示例"><span>状态</span><strong>Wi-Fi&nbsp;&nbsp;192.168.1.6</strong><small>端口 4747 · 等待电脑连接</small></div></li>
+        <li><strong>在飞镜查看正确的 IP</strong><p>打开飞镜，点击顶部“状态”。记下 <em>Wi-Fi</em> 后面的地址，例如 <code>192.168.1.6</code>。不要使用“数据网络”“VPN”“其他网络”的地址，也不要填写 <code>127.0.0.1</code>。</p><figure class="guide-shot shot-status"><img src="assets/screenshots/wifi-status.png" alt="飞镜主界面的状态卡，依次显示 Wi-Fi 地址、数据网络地址、VPN 地址、端口 4747 和等待电脑连接" loading="lazy"><figcaption><strong>点顶部“状态”</strong><span>在 OBS 里填写第一行 Wi-Fi 后面的地址；端口单独填写 4747。</span></figcaption></figure></li>
         <li><strong>在 OBS 添加 DroidCam 来源</strong><p>在 OBS 的“来源”区域点击“+”，选择 <em>DroidCam OBS</em>。如果列表中没有这一项，说明插件尚未正确安装或 OBS 还没有重启。</p></li>
         <li><strong>填写手机 IP</strong><p>打开刚添加的来源属性，将 <em>Device</em> 选为 <em>Use WiFi</em>，在 <em>WiFi IP</em> 填入手机显示的 Wi-Fi 地址。只填数字与小数点，不要加 <code>http://</code>，也不要把 <code>:4747</code> 写进 IP 框。</p><div class="obs-settings-example" aria-label="OBS 设置示例"><div><span>Device</span><strong>Use WiFi</strong></div><div><span>WiFi IP</span><strong>192.168.1.6</strong></div><div><span>Port</span><strong>4747</strong></div><div><span>Video Format</span><strong>AVC / H.264</strong></div></div><p class="plain-note">如果没有看到 WiFi IP 输入框，请在来源属性窗口内向下滚动。</p></li>
         <li><strong>先用稳妥参数连接</strong><p>第一次建议选择 <em>1280 × 720、30 fps、AVC / H.264</em>，再点击 <em>Activate</em>。连通后再按网络和电脑性能提高画质。</p></li>
@@ -82,6 +82,11 @@
         <li><strong>边看边录</strong><p>读过的文字会变灰，蓝色位置标记会跟着当前内容移动。连续空行会压缩处理，并提前露出下一段，避免小窗口看不到下一句。</p></li>
       </ol>
       <div class="gesture-list" aria-label="应用内提词器快捷操作"><span><strong>点文字</strong> 暂停 / 继续</span><span><strong>上下滑</strong> 手动找位置</span><span><strong>拖底边</strong> 只调整高度</span><span><strong>双指缩放</strong> 调整整体大小与字号</span></div>
+      <div class="shot-sequence">
+        <figure class="guide-shot shot-menu"><img src="assets/screenshots/overflow-menu.png" alt="飞镜右上角更多菜单，其中包含设置和提词器入口" loading="lazy"><figcaption><strong>从右上角菜单进入</strong><span>“设置”用于调整文稿与显示；“提词器”用于快速显示。</span></figcaption></figure>
+        <figure class="guide-shot shot-menu"><img src="assets/screenshots/teleprompter-menu.png" alt="飞镜蓝色提字按钮打开的提词器菜单，包含显示隐藏、编辑文稿、语音跟随和悬浮提词器" loading="lazy"><figcaption><strong>也可以点蓝色“提”</strong><span>录制中能快速编辑、开关跟随或切换悬浮模式。</span></figcaption></figure>
+        <figure class="guide-shot shot-result"><img src="assets/screenshots/in-app-teleprompter.png" alt="飞镜应用内提词器显示口播文稿，并提示语音跟随等待语音" loading="lazy"><figcaption><strong>应用内提词器效果</strong><span>文字只显示在手机上，OBS 接收到的是摄像头画面。</span></figcaption></figure>
+      </div>
     </section>
 
     <section class="accessibility-guide" id="accessibility">
@@ -89,6 +94,10 @@
         <div><span>原厂相机模式 · 语音跟随必做</span><h2>开启“飞镜共享麦克风”。</h2><p>Android 通常只允许一个应用占用麦克风。原厂相机开始录像后，飞镜需要通过这项无障碍服务共享声音，才能继续识别和滚动。</p></div>
         <ol><li>打开系统“设置”，进入“无障碍”。</li><li>在“已下载的服务”“更多服务”或“听觉辅助”里找到“飞镜共享麦克风”。不同品牌名称可能略有不同。</li><li>打开服务并确认授权，再回到飞镜切换“悬浮提词器”。</li><li>打开原厂相机录一小段，朗读一句，确认已读文字会变灰并自动向上移动。</li></ol>
         <div class="privacy-note"><strong>这项服务只做什么？</strong><p>只帮助飞镜在录像时继续取得麦克风声音。它不会读取屏幕内容、记录按键、代替你点击，也不会上传音频。</p></div>
+        <div class="accessibility-shots">
+          <figure class="guide-shot shot-dialog"><img src="assets/screenshots/accessibility-prompt.png" alt="飞镜提示开启共享麦克风跟读，提供暂用定速和去开启两个选项" loading="lazy"><figcaption><strong>看到提示时点“去开启”</strong><span>“暂用定速”能继续使用，但不会跟随声音滚动。</span></figcaption></figure>
+          <figure class="guide-shot shot-list"><img src="assets/screenshots/accessibility-list.png" alt="手机系统无障碍服务列表，其中有飞镜共享麦克风且当前显示已关闭" loading="lazy"><figcaption><strong>找到“飞镜共享麦克风”</strong><span>这张图里仍是“已关闭”；请点进去，把服务开关打开。</span></figcaption></figure>
+        </div>
       </div>
     </section>
 
