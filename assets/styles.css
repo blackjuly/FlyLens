@@ -22,6 +22,7 @@ h1,h2,h3,p{text-wrap:pretty}h1,h2{font-family:var(--display);font-weight:500;let
 .accessibility-band .dark-button,.guide-download .dark-button{color:var(--ink)}
 h1{font-size:clamp(52px,5.3vw,76px)}
 .stage-copy strong{max-width:210px;font-size:17px;word-break:break-all}
+.download-count{margin:14px 0 0;color:var(--muted);font-size:14px;font-weight:700}.download-count[hidden]{display:none}.download-ticket .download-count{margin:0;color:var(--blue-dark)}
 
 /* Detailed guide */
 .guide-page code{padding:.12em .4em;border-radius:5px;background:rgba(18,59,82,.08);font:600 .92em ui-monospace,SFMono-Regular,Consolas,monospace}.guide-page em{font-style:normal;font-weight:700;color:var(--paper)}
