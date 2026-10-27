@@ -12,6 +12,36 @@
     el.addEventListener("click", function (event) { event.preventDefault(); showToast("发布地址还没配置，稍后再来看看"); });
   }
   ["downloadButton", "downloadButtonBottom", "navDownload", "footerDownload"].forEach(function (id) { configureDownloadLink(byId(id)); });
+  var countTargets = document.querySelectorAll("[data-download-count]");
+  var repoMatch = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+)$/i.exec(repository);
+  if (countTargets.length && repoMatch && typeof fetch === "function") {
+    var releasesUrl = "https://api.github.com/repos/" + encodeURIComponent(repoMatch[1]) + "/" + encodeURIComponent(repoMatch[2]) + "/releases?per_page=100&page=";
+    function countReleases(page, total, found) {
+      return fetch(releasesUrl + page, { headers: { Accept: "application/vnd.github+json" } }).then(function (response) {
+        if (!response.ok) throw new Error("Release count unavailable");
+        return response.json();
+      }).then(function (releases) {
+        if (!Array.isArray(releases)) throw new Error("Invalid release data");
+        releases.forEach(function (release) {
+          if (release.draft || !Array.isArray(release.assets)) return;
+          release.assets.forEach(function (file) {
+            if (file.name !== asset) return;
+            if (!Number.isSafeInteger(file.download_count) || file.download_count < 0) throw new Error("Invalid download count");
+            total += file.download_count;
+            found = true;
+          });
+        });
+        return releases.length === 100 ? countReleases(page + 1, total, found) : { total: total, found: found };
+      });
+    }
+    countReleases(1, 0, false).then(function (result) {
+      if (!result.found) return;
+      countTargets.forEach(function (element) {
+        element.textContent = "累计下载 " + result.total.toLocaleString("zh-CN") + " 次";
+        element.hidden = false;
+      });
+    }).catch(function () { /* Downloading remains available if GitHub's API is unavailable. */ });
+  }
   var qr = byId("downloadQr"); var qrStatus = byId("qrStatus");
   if (qr && downloadUrl) {
     qr.src = config.qrImage || ("https://quickchart.io/qr?size=360&margin=2&ecLevel=Q&text=" + encodeURIComponent(downloadUrl));
