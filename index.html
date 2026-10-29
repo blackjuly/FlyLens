@@ -5,11 +5,11 @@
   <meta name="description" content="飞镜把 Android 手机变成 OBS 摄像头和语音跟随提词器，也支持悬浮在原厂相机上口播。">
   <meta property="og:type" content="website"><meta property="og:title" content="飞镜 · 手机是镜头，也是提词器"><meta property="og:description" content="手机画面送进 OBS，台词只留在手机屏幕；也能悬浮在原厂相机上，离线听你读到哪里。">
   <title>飞镜 · Android 语音跟随提词器</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css">
-  <script src="site-config.js"></script><script src="assets/app.js" defer></script>
+  <script src="site-config.js"></script><script src="assets/app.js" defer></script><script src="assets/community.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#download">跳到下载</a>
-  <header class="site-header"><nav class="nav-wrap" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><div class="nav-links"><a href="#modes">功能</a><a href="guide.html">使用指南</a><a class="nav-download" id="navDownload" href="#download">下载 APK</a></div></nav></header>
+  <header class="site-header"><nav class="nav-wrap" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><div class="nav-links"><a href="#modes">功能</a><a href="guide.html">使用指南</a><a class="github-link" data-repository-link href="https://github.com/blackjuly/FlyLens" target="_blank" rel="noopener noreferrer">GitHub · Star ↗</a><a class="nav-download" id="navDownload" href="#download">下载 APK</a></div></nav></header>
   <main id="top">
     <section class="hero section-wide" aria-labelledby="hero-title">
       <div class="hero-copy"><p class="context-line">Android · OBS · 原厂相机</p><h1 id="hero-title">手机是镜头，<br>也是提词器。</h1><p class="hero-lede">把手机画面送进 OBS，台词只留在手机屏幕。也能悬浮在原厂相机上，离线听你读到哪里。</p><div class="hero-actions" id="download"><a class="primary-button" id="downloadButton" href="#download">下载 Android APK</a><a class="text-link" href="guide.html">先看使用方法 <span aria-hidden="true">→</span></a></div><p class="download-count" data-download-count hidden></p><p class="compatibility">Android 6.0+ · 悬浮语音跟随建议 Android 10+</p></div>
@@ -22,8 +22,19 @@
 	    <section class="mode-section section-wide" id="modes" aria-labelledby="modes-title"><div class="section-intro"><h2 id="modes-title">同一份文稿，<br>适合两种拍摄现场。</h2><p>直播或电脑录制时用 OBS 模式；只拿手机拍口播时，切到悬浮提词器。</p></div><div class="mode-rows"><article><h3>连接 OBS</h3><p>手机是摄像头，也是眼前的提词器。手机画面进入 OBS，提词内容不会出现在直播画面里。</p><span>Wi-Fi / USB · H.264 / H.265 · 镜头与音频可调</span></article><article><h3>原厂相机悬浮</h3><p>提词器浮在原厂相机上方，录制时继续离线听读、自动滚动，已读内容逐步变灰。</p><span>语音跟随 · 已读变灰 · 高度单独可调</span></article></div></section>
 	    <section class="guide-bridge section-wide" aria-labelledby="guide-bridge-title"><p>需要开始配置？</p><h2 id="guide-bridge-title">安装插件、填写 IP、开启提词器与排查问题，都在一份指南里。</h2><a class="dark-button" href="guide.html">打开完整使用指南</a></section>
 	    <section class="download-close" aria-labelledby="download-title"><div class="download-close-inner"><div><h2 id="download-title">看着镜头，<br>把话说完。</h2><p>扫码或直接下载 Android APK。</p></div><div class="download-ticket"><img id="downloadQr" src="assets/qr-placeholder.svg" alt="飞镜 APK 下载二维码"><div><a class="dark-button" id="downloadButtonBottom" href="#download">下载 APK</a><span class="download-count" data-download-count hidden></span><button type="button" id="copyLink">复制下载链接</button><span id="qrStatus">待配置发布地址</span></div></div></div></section>
+    <section class="community-section section-wide" id="comments" aria-labelledby="community-title">
+      <div class="community-intro"><h2 id="community-title">一起把飞镜<br>用得更顺手。</h2><p>喜欢飞镜？去 GitHub 点个 Star。遇到问题，或有下一版想要的功能，也欢迎留言。</p><a class="text-link" data-repository-link href="https://github.com/blackjuly/FlyLens" target="_blank" rel="noopener noreferrer">在 GitHub 支持飞镜 ↗</a><p class="repository-address"><a data-repository-link href="https://github.com/blackjuly/FlyLens" target="_blank" rel="noopener noreferrer">github.com/blackjuly/FlyLens</a></p></div>
+      <div class="comment-panel">
+        <div class="comment-heading"><h3>留言与反馈</h3><a class="dark-button" id="writeComment" href="https://github.com/blackjuly/FlyLens/issues/1#new_comment_field" target="_blank" rel="noopener noreferrer">去 GitHub 留言 ↗</a></div>
+        <p class="comment-note">无需登录即可阅读；发表评论和回复需要 GitHub 账号，留言会公开展示在这里。</p>
+        <p id="commentStatus" class="comment-status" role="status" aria-live="polite">留言同步自 GitHub。</p>
+        <div id="commentList" class="comment-list" aria-label="访客留言"></div>
+        <div class="comment-actions"><button id="refreshComments" type="button" hidden>刷新留言</button><button id="moreComments" type="button" hidden>加载更多</button><a id="allComments" href="https://github.com/blackjuly/FlyLens/issues/1" target="_blank" rel="noopener noreferrer">在 GitHub 查看全部 ↗</a></div>
+        <noscript><p>请开启 JavaScript 查看网页留言，或直接前往 <a href="https://github.com/blackjuly/FlyLens/issues/1">GitHub 留言区</a>阅读与回复。</p></noscript>
+      </div>
+    </section>
   </main>
-  <footer class="section-wide"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><p>把镜头留给表达。</p><nav aria-label="页脚导航"><a href="guide.html">使用指南</a><a id="footerDownload" href="#download">下载 APK</a></nav></footer>
+  <footer class="section-wide"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">飞</span><span>飞镜</span></a><p>把镜头留给表达。</p><nav aria-label="页脚导航"><a href="guide.html">使用指南</a><a href="#comments">留言</a><a data-repository-link href="https://github.com/blackjuly/FlyLens" target="_blank" rel="noopener noreferrer">GitHub / Star ↗</a><a id="footerDownload" href="#download">下载 APK</a></nav></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

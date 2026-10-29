@@ -14,6 +14,10 @@
   ["downloadButton", "downloadButtonBottom", "navDownload", "footerDownload"].forEach(function (id) { configureDownloadLink(byId(id)); });
   var countTargets = document.querySelectorAll("[data-download-count]");
   var repoMatch = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+)$/i.exec(repository);
+  if (repoMatch) document.querySelectorAll("[data-repository-link]").forEach(function (link) {
+    link.href = repository;
+    if (link.closest(".repository-address")) link.textContent = "github.com/" + repoMatch[1] + "/" + repoMatch[2];
+  });
   if (countTargets.length && repoMatch && typeof fetch === "function") {
     var releasesUrl = "https://api.github.com/repos/" + encodeURIComponent(repoMatch[1]) + "/" + encodeURIComponent(repoMatch[2]) + "/releases?per_page=100&page=";
     function countReleases(page, total, found) {
